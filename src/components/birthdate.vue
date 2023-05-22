@@ -49,7 +49,7 @@ else{
     return 31;
 }
 });
-const days = ref([...Array(numbers).keys()].map((i) => i + 1));
+const days = ref([...Array(numbers.value).keys()].map((i) => i + 1));
 const selectedDay = ref('');
 
 
