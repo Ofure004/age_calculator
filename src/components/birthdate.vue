@@ -15,8 +15,8 @@
                 <option v-for = "month in months" :value="month" :key="month">{{ month }}</option>
             </select>
         </div>
-<!-- 
-        {{ store.selectedYear }}
+
+        <!-- {{ store.selectedYear }}
         {{ numbers }} -->
         <div class="col">
             <label>Day</label>
@@ -50,6 +50,7 @@ else{
 }
 });
 const days = ref([...Array(numbers.value).keys()].map((i) => i + 1));
+
 const selectedDay = ref('');
 
 
@@ -63,7 +64,6 @@ const getYears = () =>{
         years.value = [...years.value, i];
     }
 }
-watch(selectedMonth, () =>{
     // if(newValue == 4 || newValue == 6 || newValue == 9 || newValue == 11){
 
     //     console.log("Odd month");
@@ -76,10 +76,9 @@ watch(selectedMonth, () =>{
     //     days.length = 31;
     //     console.log(days.length);
     // }
-    console.log(selectedMonth.value);
-    console.log(days);
-    console.log(numbers);
-})
+console.log(selectedMonth.value);
+console.log(days);
+// console.log(numbers);
 
 onMounted(() => {getYears()})
 
